@@ -1,15 +1,5 @@
 function compareObjects(obj1, obj2) {
   // put your code here
-  let keyObj1 = Object.keys(obj1);
-  let keyObj2 = Object.keys(obj2);
-  for (let i = 0; i < obj1.length; i += 1) {
-    for (let j = 0; j < obj2.length; i += 1) {
-      if (keyObj1[i] === keyObj2[j]) {
-        return true;
-      }
-      return false;
-    }
-  }
 }
 
 // examples
