@@ -37,7 +37,8 @@ const attachEventList = () => {
 };
 
 const clickAttachList = attachEventList;
-attachHandlersBtn.addEventListener('DOMContentLoaded', clickAttachList);
+
+document.addEventListener('DOMContentLoaded', clickAttachList);
 attachHandlersBtn.addEventListener('click', clickAttachList);
 
 const removeEventList = () => {
