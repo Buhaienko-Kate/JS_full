@@ -37,9 +37,8 @@ const attachEventList = () => {
 };
 
 const clickAttachList = attachEventList;
-const contentLoaded = attachEventList;
+attachHandlersBtn.addEventListener('DOMContentLoaded', clickAttachList);
 attachHandlersBtn.addEventListener('click', clickAttachList);
-attachHandlersBtn.addEventListener('DOMContentLoaded', contentLoaded);
 
 const removeEventList = () => {
   divElem.removeEventListener('click', logGreenDiv);
