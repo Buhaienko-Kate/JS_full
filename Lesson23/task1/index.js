@@ -56,17 +56,17 @@ const onPasswordChange = event => {
 emailInputElem.addEventListener('input', onEmailChange);
 passwordlInputElem.addEventListener('input', onPasswordChange);
 
-// const formElem = document.querySelector('.login-form');
+const formElem = document.querySelector('.login-form');
 
-// const onFormSubmit = event => {
-//   event.preventDefault();
-//   const formData = [...new FormData(formElem)].reduce(
-//     (acc, [field, value]) => ({
-//       ...acc,
-//       [field]: value,
-//     }),
-//     {},
-//   );
-//   alert(JSON.stringify(formData));
-// };
-// formElem.addEventListener('submit', onFormSubmit);
+const onFormSubmit = event => {
+  event.preventDefault();
+  const formData = [...new FormData(formElem)].reduce(
+    (acc, [field, value]) => ({
+      ...acc,
+      [field]: value,
+    }),
+    {},
+  );
+  alert(JSON.stringify(formData));
+};
+formElem.addEventListener('submit', onFormSubmit);
