@@ -34,7 +34,7 @@ const validatorsByField = {
 };
 
 const validate = (fieldName, value) => {
-  const validators = validatorsByField(fieldName);
+  const validators = validatorsByField[fieldName];
   return validators
     .map(validator => validator(value))
     .filter(errorText => errorText)
