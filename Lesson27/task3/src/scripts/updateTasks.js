@@ -2,7 +2,7 @@ import { renderTasks } from './renderer.js';
 import { listElem } from './createTask.js';
 import { setItem, getItem } from './storage.js';
 
-export const checkIfDone = event => {
+export const updatedTasks = event => {
   const isCheckbox = event.target.classList.contains('list__item-checkbox');
 
   if (!isCheckbox) {
@@ -12,7 +12,7 @@ export const checkIfDone = event => {
 
   const tasksList = getItem('tasksList');
 
-  const updatedTasks = tasksList.map(task => {
+  const updateTasks = tasksList.map(task => {
     if (task.id === +checkedElem.dataset.id) {
       return {
         ...task,
@@ -23,6 +23,6 @@ export const checkIfDone = event => {
   });
 
   listElem.innerHTML = '';
-  setItem('tasksList', updatedTasks);
+  setItem('tasksList', updateTasks);
   renderTasks();
 };
