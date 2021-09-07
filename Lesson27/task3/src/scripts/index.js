@@ -11,9 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const crtBtnElem = document.querySelector('.create-task-btn');
 
-listElem.addEventListener('click', checkIfDone);
-
 crtBtnElem.addEventListener('click', creatTask);
+listElem.addEventListener('click', checkIfDone);
 
 const onStorageChange = e => {
   if (e.key === 'tasks') {
