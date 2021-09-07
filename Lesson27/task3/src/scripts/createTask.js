@@ -6,14 +6,14 @@ export const listElem = document.querySelector('.list');
 
 export const creatTask = () => {
   if (inputElem.value === '') return;
-  const check = getItem('tasks');
+  const check = getItem('tasksList');
   check.push({
     text: inputElem.value,
     done: false,
     id: check.length + 1,
   });
 
-  setItem('tasks', check);
+  setItem('tasksList', check);
   inputElem.value = '';
 
   listElem.innerHTML = '';

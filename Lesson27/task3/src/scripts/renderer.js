@@ -28,7 +28,7 @@ const createListItem = ({ text, done, id }) => {
 const compareTasks = (a, b) => a.done - b.done;
 
 export const renderTasks = () => {
-  const tasksList = getItem('tasks') || [];
+  const tasksList = getItem('tasksList') || [];
 
   listElem.innerHTML = '';
 

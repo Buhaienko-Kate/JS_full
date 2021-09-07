@@ -5,7 +5,7 @@ import { getItem, setItem } from './storage.js';
 import { tasks } from './tasks.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  setItem('tasks', tasks);
+  setItem('tasksList', tasks);
   renderTasks();
 });
 
@@ -15,10 +15,10 @@ crtBtnElem.addEventListener('click', creatTask);
 listElem.addEventListener('click', checkIfDone);
 
 const onStorageChange = e => {
-  if (e.key === 'tasks') {
+  if (e.key === 'tasksList') {
     renderTasks();
   }
-  setItem('task', getItem('tasks'));
+  setItem('tasksList', getItem('tasksList'));
 };
 
 window.addEventListener('storage', onStorageChange);

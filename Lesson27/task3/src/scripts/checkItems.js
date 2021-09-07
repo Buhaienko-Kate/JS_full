@@ -10,7 +10,7 @@ export const checkIfDone = event => {
   }
   const checkedElem = event.target;
 
-  const tasksList = getItem('tasks');
+  const tasksList = getItem('tasksList');
 
   const updatedTasks = tasksList.map(task => {
     if (task.id === +checkedElem.dataset.id) {
@@ -23,6 +23,6 @@ export const checkIfDone = event => {
   });
 
   listElem.innerHTML = '';
-  setItem('tasks', updatedTasks);
+  setItem('tasksList', updatedTasks);
   renderTasks();
 };
