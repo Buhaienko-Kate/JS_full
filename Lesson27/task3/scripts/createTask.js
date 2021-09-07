@@ -8,9 +8,9 @@ export const creatTask = () => {
   if (inputElem.value === '') return;
   const check = getItem('tasks');
   check.push({
-    id: check.length + 1,
     text: inputElem.value,
     done: false,
+    id: check.length + 1,
   });
 
   setItem('tasks', check);
