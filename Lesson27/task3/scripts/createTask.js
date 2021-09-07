@@ -17,5 +17,5 @@ export const creatTask = () => {
   inputElem.value = '';
 
   listElem.innerHTML = '';
-  renderTasks(check);
+  renderTasks();
 };
