@@ -7,8 +7,8 @@ export const cleanReposList = () => {
 export const renderRepos = repoList => {
   const repoListElem = repoList.map(({ name }) => {
     const listItemElem = document.createElement('li');
-    listElem.classList.add('repo-list__item');
-    listElem.textContent = name;
+    listItemElem.classList.add('repo-list__item');
+    listItemElem.textContent = name;
 
     return listItemElem;
   });
