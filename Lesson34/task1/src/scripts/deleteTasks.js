@@ -1,5 +1,6 @@
 import { renderTasks } from './renderer.js';
 import { getTasksList, deleteTask } from './tasksGateWay.js';
+import { setItem } from './storage.js';
 
 export function onDeleteTask(event) {
   const isDeleteBtn = event.target.classList.contains('list__item-delete-btn');
@@ -12,7 +13,14 @@ export function onDeleteTask(event) {
   //   console.log(nearestInputId);
   deleteTask(nearestInputId)
     .then(() => getTasksList())
-    .then(() => {
+    .then(newTasksList => {
+      setItem(
+        'tasksList',
+        newTasksList,
+      ); /**полученные данные с сервера записываем в LocalStorage */
       renderTasks();
     });
+  // .then(() => {
+  //   renderTasks();
+  // });
 }
